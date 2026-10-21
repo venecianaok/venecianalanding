@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ya estás en la lista VIP · Veneciana</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B0B0B">
+<style>
+  :root{
+    --black:#0B0B0B;
+    --white:#FFFFFF;
+    --soft:#BDBDBD;
+    --line:#2E2E2E;
+    --red:#D21F1A;
+    --red-dark:#9E1511;
+    --red-deep:#7A0F0C;
+    --serif:"Cormorant Garamond","Cormorant",Garamond,"EB Garamond","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;height:100%}
+  body{
+    margin:0;min-height:100%;color:var(--white);
+    background:radial-gradient(ellipse 80% 50% at 50% 35%,rgba(255,255,255,.08),transparent 70%),var(--black);
+    font-family:var(--serif);font-size:19px;line-height:1.45;
+    -webkit-font-smoothing:antialiased;display:flex;flex-direction:column;
+  }
+  h1,p{margin:0}
+  :focus-visible{outline:2px solid var(--white);outline-offset:4px}
+
+  .wrap{width:100%;max-width:560px;margin:0 auto;padding:18px 20px 36px;flex:1;display:flex;flex-direction:column}
+  .logo{display:block;text-align:center;font-size:15px;letter-spacing:.45em;text-indent:.45em;font-weight:600;margin-bottom:32px}
+
+  /* El pase VIP, ahora validado */
+  .ticket{
+    --notch:14px;background:var(--white);color:var(--black);border-radius:6px;position:relative;
+    box-shadow:0 30px 60px -30px rgba(255,255,255,.25);
+    animation:arrive .6s cubic-bezier(.2,.8,.2,1) both;
+  }
+  @keyframes arrive{from{opacity:0;transform:translateY(16px) rotate(-1.5deg)}to{opacity:1;transform:none}}
+  .cd-block{
+    position:relative;z-index:1;margin:-22px 14px 0;
+    background:var(--red);color:#fff;border-radius:6px;padding:12px 14px 14px;text-align:center;
+    transform:perspective(700px) rotateX(10deg);transform-origin:50% 100%;
+    background-image:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,0) 45%);
+    box-shadow:
+      0 1px 0 var(--red-dark),0 2px 0 var(--red-dark),0 3px 0 var(--red-dark),0 4px 0 var(--red-dark),
+      0 5px 0 var(--red-dark),0 6px 0 var(--red-dark),0 7px 0 var(--red-dark),0 8px 0 var(--red-deep),
+      0 18px 24px -8px rgba(0,0,0,.55);
+  }
+  .cd-label{font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+  .countdown{display:flex;justify-content:center;gap:8px;font-variant-numeric:tabular-nums}
+  .countdown div{min-width:52px;padding:6px 4px 5px;border-radius:4px;background:rgba(0,0,0,.22);box-shadow:inset 0 2px 3px rgba(0,0,0,.25)}
+  .countdown b{display:block;font-size:34px;line-height:1;font-weight:600;text-shadow:0 2px 0 rgba(0,0,0,.25)}
+  .countdown small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-top:3px}
+  .countdown.is-open{font-size:26px;font-weight:600;padding:4px 0}
+  .ticket{margin-top:22px}
+
+  /* Marquesina */
+  .ticker{border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:7px 0}
+  .ticker-track{display:inline-flex;animation:ticker 26s linear infinite}
+  .ticker span{font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;padding-right:28px}
+  .ticker span::after{content:"✦";padding-left:28px;font-size:10px}
+  @keyframes ticker{to{transform:translateX(-50%)}}
+
+  .ticket-body{padding:28px 22px 26px;position:relative}
+
+  .stamp{
+    display:inline-block;transform:rotate(-6deg);
+    border:2.5px solid var(--red);color:var(--red);border-radius:4px;
+    padding:4px 12px 3px;font-size:15px;letter-spacing:.26em;font-weight:700;text-transform:uppercase;
+    margin-bottom:18px;animation:stamp .45s cubic-bezier(.3,1.6,.5,1) .5s both;
+  }
+  @keyframes stamp{from{opacity:0;transform:rotate(-6deg) scale(1.8)}to{opacity:1;transform:rotate(-6deg) scale(1)}}
+  h1{font-weight:500;font-size:clamp(36px,10vw,54px);line-height:1}
+  h1 em{font-style:italic}
+  .mail{margin-top:16px;font-size:19px;color:#3D3D3D}
+  .mail strong{color:var(--black);font-weight:700}
+
+  .cta-block{margin-top:32px;text-align:center}
+  .cta-lead{font-size:21px;font-style:italic;color:var(--white);margin-bottom:14px}
+  .btn{
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    width:100%;min-height:64px;padding:14px 20px;border-radius:4px;
+    background:var(--white);color:var(--black);text-decoration:none;
+    font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;line-height:1.25;text-align:center;
+    transition:background-color .15s ease,transform .15s ease;
+  }
+  .btn:hover{background:#E6E6E6}
+  .btn:active{transform:scale(.98)}
+  .btn svg{flex:none}
+  .dates{margin-top:auto;padding-top:36px;text-align:center;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);font-weight:700}
+
+  @media (min-width:900px){
+    .wrap{padding-top:28px}
+    .logo{margin-bottom:56px;font-size:16px}
+    .ticket-body{padding:36px 36px 34px}
+    .cd-block{margin:-26px 22px 0;padding:14px 16px 16px}
+    .countdown div{min-width:68px}
+    .countdown b{font-size:40px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+</style>
+</head>
+<body>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Ya estás adentro</span><span>Acceso VIP 31.10</span><span>Prendas nuevas</span><span>Con descuento</span><span>Stock limitado</span>
+      <span>Ya estás adentro</span><span>Acceso VIP 31.10</span><span>Prendas nuevas</span><span>Con descuento</span><span>Stock limitado</span>
+    </div>
+  </div>
+  <main class="wrap">
+    <span class="logo" aria-label="Veneciana">VENECIANA</span>
+
+    <div class="ticket">
+      <div class="cd-block">
+        <p class="cd-label">Tu pase VIP · <span class="cd-when">abre en</span></p>
+        <div class="countdown" data-countdown role="timer" aria-label="Tiempo que falta para el acceso VIP"></div>
+      </div>
+      <div class="ticket-body">
+        <p class="stamp" aria-hidden="true">Adentro</p>
+        <h1>Listo, ya estás en la <em>lista VIP</em>.</h1>
+        <p class="mail">Ya podés ir armando tu carrito: el 31 te va a estar llegando el email con la <strong>contraseña secreta</strong> para entrar a la web y vas a ver los <strong>descuentazos 100% reales</strong>. Te recomiendo aprovechar ese día, porque el stock es limitado.</p>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <p class="cta-lead">Y si querés ser más VIP aún…</p>
+      <a class="btn" href="https://www.instagram.com/channel/AbbtY5UCCvv5YrZR/" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+        Unirme a la comunidad de Instagram
+      </a>
+    </div>
+
+    <p class="dates">Acceso VIP 31/10 · Cyber 1 al 4/11</p>
+  </main>
+
+<script>
+(function(){
+  var OPEN_AT = new Date('2026-10-31T00:00:00-03:00'); /* misma hora que en la landing */
+  var el = document.querySelector('[data-countdown]');
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function tick(){
+    var ms = OPEN_AT - new Date();
+    if(ms <= 0){
+      el.className = 'countdown is-open'; el.textContent = '¡Ya abrió!';
+      var w = document.querySelector('.cd-when'); if(w) w.textContent = 'acceso';
+      return;
+    }
+    var s = Math.floor(ms / 1000);
+    el.innerHTML =
+      '<div><b>' + Math.floor(s / 86400) + '</b><small>días</small></div>' +
+      '<div><b>' + pad(Math.floor(s % 86400 / 3600)) + '</b><small>hs</small></div>' +
+      '<div><b>' + pad(Math.floor(s % 3600 / 60)) + '</b><small>min</small></div>' +
+      '<div><b>' + pad(s % 60) + '</b><small>seg</small></div>';
+    setTimeout(tick, 1000);
+  }
+  tick();
+})();
+</script>
+</body>
+</html>
