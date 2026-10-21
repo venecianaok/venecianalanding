@@ -159,18 +159,10 @@
     font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
     box-shadow:0 3px 0 var(--red-deep);
   }
-  /* Placeholder de imagen: reemplazar el <div class="ph"> por <img class="feature-img" src="..." alt="..." width="1080" height="1350" loading="lazy"> */
-  .ph{
-    aspect-ratio:4/5;width:100%;background:#1E1E1E;
-    display:flex;align-items:flex-end;padding:14px;
-    font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9E9E9E;
-  }
-  img.feature-img{aspect-ratio:4/5;width:100%;height:auto;object-fit:cover;display:block}
+  img.feature-img{aspect-ratio:4/5;width:100%;height:auto;object-fit:cover;object-position:50% 30%;display:block;background:#1E1E1E}
   .feature-body{padding:24px 22px 28px;display:flex;flex-direction:column;justify-content:center}
   .feature-kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--soft)}
   .feature-body h3{font-weight:600;font-size:32px;line-height:1.05;margin-top:8px;letter-spacing:.02em}
-  .feature-sub{margin-top:6px;font-style:italic;font-size:21px}
-  .feature-body p.desc{margin-top:14px;font-size:19px;color:var(--soft)}
   .feature-cta{
     margin-top:22px;display:inline-flex;align-items:center;justify-content:center;gap:10px;align-self:flex-start;
     min-height:50px;padding:12px 22px;border-radius:4px;background:var(--white);color:var(--black);text-decoration:none;
@@ -289,7 +281,7 @@
       <div>
         <p class="eyebrow">Lista VIP · Cyber 2026</p>
         <h1>Sé la primera en entrar al Cyber <em>antes que nadie</em></h1>
-        <p class="sub">Este sábado 31 te damos acceso anticipado <strong class="caps">solo a vos</strong>: <strong>prendas nuevas que nunca salieron a la venta</strong>, con descuento y muy poco stock. El resto entra en el Cyber del 1 al 4 de noviembre.</p>
+        <p class="sub">Este sábado 31 te damos acceso anticipado al verdadero <strong>CyberVene</strong>: <strong>el mayor descuento del año</strong>, con nuevos ingresos y stock limitado. El resto no sé si llegará a comprar… 🤭</p>
         <p class="big-date" aria-hidden="true">31.10<span>Un día antes del Cyber</span></p>
       </div>
 
@@ -341,7 +333,7 @@
         </li>
         <li class="card">
           <span class="card-num" aria-hidden="true">3</span>
-          <h3>Descuento exclusivo</h3>
+          <h3>Descuentos del 40%, 50% y hasta 70% OFF</h3>
           <p>Precio especial solo para la lista VIP, sobre las prendas nuevas.</p>
         </li>
         <li class="card">
@@ -358,20 +350,17 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="pill">Lo que viene</span>
-        <h2 id="new-title">Un adelanto del <em>nuevo ingreso</em></h2>
-        <p>Así es lo que vas a ver primero el 31. Hay pocas unidades de cada una.</p>
+        <h2 id="new-title">Lanzamiento de la nueva joyita con <em style="white-space:nowrap">40% OFF</em></h2>
+        <p>Sí, leíste bien.</p>
       </div>
       <article class="feature">
         <div class="feature-media">
           <span class="badge">Nuevo ingreso</span>
-          <!-- IMAGEN NUEVO INGRESO · proporción 4:5 (ej. 1080×1350) -->
-          <div class="ph" role="img" aria-label="Espacio para foto del nuevo ingreso">Foto 4:5 · Nuevo ingreso</div>
+          <img class="feature-img" src="sw-lali.jpg" alt="Sw Lali: sweater gris acanalado con cierre" width="1024" height="1536" loading="lazy" decoding="async">
         </div>
         <div class="feature-body">
           <p class="feature-kicker">Solo lista VIP · 31/10</p>
-          <h3>[TIPO + NOMBRE]</h3>
-          <p class="feature-sub">Sale por primera vez, con descuento</p>
-          <p class="desc">[Una o dos líneas sobre la prenda: tela, cómo queda, con qué la combinás.] Poquitas unidades: si te gusta, el 31 entrás primera.</p>
+          <h3>Sw Lali</h3>
           <a class="feature-cta" href="#form">Quiero mi acceso VIP</a>
         </div>
       </article>
